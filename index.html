@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Pengembangan Aplikasi Mobile (Kotlin)</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Ujian Tengah Semester Pengembangan Aplikasi Mobile (Kotlin)</h1>
+    </header>
+    <nav>
+        <div id="section-nav">
+            <h2>Buat Lima Halaman + Dua Halaman Bonus (Opsional):
+                <ul>
+                    <li><a href="#splash">Splash Screen</a></li>
+                    <li><a href="#login">Halaman Login</a></li>
+                    <li><a href="#register">Registrasi</a></li>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#profile">Profil</a></li>
+                    <li><a href="#mlayout">Motion Layout (Bonus)</a></li>
+                    <li><a href="#detail">Detail Pengguna (Bonus)</a></li>
+                </ul>
+            </h2>
+        </div>
+        <div class="container">
+            <img class="fit" src="wireframe_app.png">
+        </div>
+        <h3> Anda dapat mengakses Prototype dari Sini : <a target="_blank" href="https://www.figma.com/proto/JKLSTmrvTVJ3WZguKQAj8R/%F0%9F%93%B2Wireframes-for-mobile-UI-design-(Community)?type=design&node-id=977-5&t=UWdTaMY0ZO4WEFVL-0&scaling=contain&page-id=977%3A2&starting-point-node-id=977%3A3">LINK PROTOTIPE FIGMA</a></h3>
+    </nav>
+    <main>
+        <ul>
+            <li>
+                <h2 id="splash">Splash Screen <i style="color: red;">*harus ada</i></h2>
+                <ol>
+                    <li>Logo bisa apa saja</li>
+                    <li>Beri penundaan tiga detik (3000ms) untuk langsung pindah ke halaman berikutnya</li>
+                    <li>Periksa apakah Anda sudah masuk atau belum menggunakan DataStore Preference<br>
+                        Jika belum, Anda akan diarahkan ke halaman Login atau ke halaman Onboarding Motion Layout (bonus) <br>
+                        Jika sudah, Anda akan diarahkan ke halaman Beranda</li>
+                    <li>Panduan <a target="_blank" href="https://youtu.be/WZWr0Abomfw?si=znsuqVuGEevwM829">Cara Membuat Splash Screen</a></li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="login">Halaman Login <i style="color: red;">*harus ada</i></h2>
+                <ol>
+                    <li>Buat halaman Login</li>
+                    <li>Pengguna dapat masuk</li>
+                    <li>Pengguna dapat klik tombol registrasi untuk pindah ke halaman registrasi</li>
+                    <li>Periksa apakah nama pengguna dan kata sandi yang dimasukkan tersimpan di DataStore / Firebase Auth <a target="_blank" href="https://firebase.google.com/docs/auth/android/start">Tutorial Firebase</a></li>
+                    <li>Jika berhasil masuk, ia akan diarahkan ke halaman dasbor dan status "masuk" akan disimpan di DataStore Preference</li>
+                    <li>Buat email: <i><b>admin</b></i> dan password: <i><b>PAM2024</b></i> sebagai akun tes</li>
+                    <li>Logout akan kembali ke halaman login</li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="register">Halaman Registrasi <i style="color: red;">*harus ada</i></h2>
+                <ol>
+                    <li>Buat halaman Registrasi untuk mendaftar akun (bisa dalam halaman yang sama dengan halaman Login atau buat halaman baru)</li>
+                    <li>Setidaknya terdapat nama pengguna aplikasi, kata sandi, nama pengguna GitHub, nik, dan email</li>
+                    <li>Data disimpan di DataStore / Firebase Auth </li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="home">Halaman Beranda <i style="color: red;">*harus ada</i></h2>
+                <ol>
+                    <li>Buat Halaman Beranda (bisa Activity atau Fragment)</li>
+                    <li>Tampilkan daftar pengguna dari API reqres.in seperti <a target="_blank" href="https://github.com/dicodingacademy/demo-ilt-android-bangkit/tree/main/ILT3/LatihanRetrofit">Contoh Kode</a> di materi sesi 5 menggunakan recyclerview (tampilkan foto, nama pengguna, dan email) menggunakan Retrofit</li>
+                    <li>Dapat dicari menggunakan searchview seperti pada tugas individu sebelumnya</li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="profile">Halaman Profil <i style="color: red;">*harus ada</i></h2>
+                <ol>
+                    <li>Buat Halaman Pengguna (bisa Activity atau Fragment)</li>
+                    <li>Tampilkan login pengguna yang minimal terdiri dari foto dalam bentuk huruf pertama dari nama pengguna <a target="_blank" href="https://stackoverflow.com/questions/32930636/how-show-the-letter-with-the-circle-android">Tutorial</a>, nama pengguna, nama pengguna GitHub, dan Email</li>
+                    <li>Juga, sertakan fungsi logout untuk pindah ke halaman Login agar pengguna lain dapat masuk/registrasi</li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="mlayout">Halaman OnBoarding menggunakan Motion Layout <i">(bonus)</i></h2>
+                <ol>
+                    <li>Buat Halaman OnBoarding menggunakan Motion Layout</li>
+                    <li>Buat minimal tiga papan, kontennya bisa apa saja</li>
+                    <li>Panduan 
+                        <a target="_blank" href="https://github.com/dicodingacademy/demo-ilt-android-bangkit/tree/ILT-5/ILT4/Motion%20Layout">Proyek OnBoarding</a>
+                    </li>
+                    <li>Tutorial:
+                        <a target="_blank" href="https://developer.android.com/develop/ui/views/animations/motionlayout?hl=id">Klik disini</a>
+                    </li>
+                    <li>Contoh Kode:
+                        <a target="_blank" href="https://developer.android.com/develop/ui/views/animations/motionlayout/examples?hl=id">Klik disini</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h2 id="detail">Halaman Detail Pengguna <i>(bonus)</i></h2>
+                <ol>
+                    <li>Buat Halaman Detail Pengguna (bisa Activity atau Fragment)</li>
+                    <li>Teruskan Argumen atau Intent dari Beranda, menggunakan id untuk mendapatkan data pengguna dari API https://reqres.in/api/users/2</li>
+                    <li>Tampilkan data pengguna dari Respons API</li>
+                </ol>
+            </li>
+            <li>
+                <h2>Waktu Kerja</h2>
+                <ol>
+                    <li><i>Mulai: <b class="urgent">Senin, 25 Maret 2024 14:00:00 GMT+7</b></i></li>
+                    <li>
+                        <i>
+                            Batas Akhir Pengumpulan: <b class="urgent">Sabtu, 31 Maret 2024 23:59:59 GMT+7</b>
+                        </i>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h2>Aturan Pengiriman</h2>
+                <ol>
+                    <li>Formulir akan ditutup pada batas waktu pengiriman, jika dikirim terlambat tidak akan dikoreksi</li>
+                    <li>Lampirkan Tautan GitHub dengan nama proyek yang berisi nim dan repo bersifat publik</li>
+                    <li>Formulir Pengiriman UTS: <a href="https://forms.gle/Vtq4WBgPoJExJJ8f8" target="_blank">Klik di Sini</a></li>
+                </ol>
+            </li>
+            <li>
+                <h2>Komponen Penilaian</h2>
+                <table>
+                    <tbody><tr>
+                        <th>Kriteria</th>
+                        <th>Bobot</th>
+                    </tr>
+                    <tr>
+                        <td>Tugas yang Diperlukan</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Fungsi Berjalan dengan Baik</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <td>Kode Bersih</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Desain Antarmuka Pengguna (UI)</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Tugas Bonus</td>
+                        <td>20%</td>
+                    </tr>
+                </tbody></table>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        Mata Kuliah Pengembangan Aplikasi Mobile ITERA © 2024
+    </footer>
+</body>
+</html>
